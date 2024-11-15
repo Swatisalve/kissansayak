@@ -1,0 +1,106 @@
+/* Body and general layout */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f9;
+  color: #333;
+}
+
+h1, h2 {
+  color: #007bff;
+  text-align: center;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Welcome Page */
+.welcome-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: url('https://example.com/farming-image.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+.welcome-container h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+
+.welcome-container p {
+  font-size: 1.5em;
+}
+
+.welcome-container button {
+  font-size: 1.2em;
+  padding: 15px 30px;
+  border-radius: 5px;
+}
+
+/* Registration Form */
+.registration-container {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+#form-heading {
+  color: #007bff;
+  margin-bottom: 20px;
+}
+
+/* Align labels and inputs */
+form .form-group {
+  margin-bottom: 15px;
+}
+
+form label {
+  display: block;
+  text-align: left;
+  font-size: 1.2em;
+  margin-bottom: 5px;
+}
+
+form input {
+  width: 100%;
+  padding: 10px;
+  margin: 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+form button {
+  width: 100%;
+  padding: 12px;
+  background-color: #28a745;
+  color: white;
+  font-size: 1.2em;
+  border: none;
+  border-radius: 5px;
+}
+
+form button:hover {
+  background-color: #218838;
+}

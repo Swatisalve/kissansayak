@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration/Login</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="registration-container">
+    <h2 id="form-heading">Registration</h2>
+    <form id="registration-form">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" placeholder="Enter your name" required>
+      </div>
+      <div class="form-group">
+        <label for="address">Address</label>
+        <input type="text" id="address" placeholder="Enter your address" required>
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" placeholder="Enter your phone number" required>
+      </div>
+      <div class="form-group">
+        <label for="adhar">Aadhaar Card Number</label>
+        <input type="text" id="adhar" placeholder="Enter your Aadhaar Card number" required>
+      </div>
+      <div class="form-group">
+        <label for="occupation">Occupation</label>
+        <input type="text" id="occupation" placeholder="Enter your occupation" required>
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+  <script>
+    // Get selected language from localStorage
+    const language = localStorage.getItem("selectedLanguage");
+    const formHeading = document.getElementById("form-heading");
+
+    console.log("Selected Language from localStorage:", language); // Debugging log
+
+    if (language === "Hindi") {
+      formHeading.innerText = "रजिस्ट्रेशन";
+      document.querySelector("label[for='name']").innerText = "नाम";
+      document.querySelector("label[for='address']").innerText = "पता";
+      document.querySelector("label[for='phone']").innerText = "फोन नंबर";
+      document.querySelector("label[for='adhar']").innerText = "आधार कार्ड नंबर";
+      document.querySelector("label[for='occupation']").innerText = "व्यवसाय";
+    } else if (language === "Spanish") {
+      formHeading.innerText = "Registro";
+      document.querySelector("label[for='name']").innerText = "Nombre";
+      document.querySelector("label[for='address']").innerText = "Dirección";
+      document.querySelector("label[for='phone']").innerText = "Número de teléfono";
+      document.querySelector("label[for='adhar']").innerText = "Número de Aadhaar";
+      document.querySelector("label[for='occupation']").innerText = "Ocupación";
+    }
+    
+    // Handle form submission
+    document.getElementById("registration-form").addEventListener("submit", function (event) {
+      event.preventDefault();
+      window.location.href = "dashboard.html";  // Redirect after form submission
+    });
+  </script>
+</body>
+</html>
+
+

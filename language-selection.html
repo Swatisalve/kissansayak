@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Select Language</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="language-selection-container">
+    <h2>Select Your Language</h2>
+    <div class="language-buttons">
+      <button onclick="selectLanguage('English')">English</button>
+      <button onclick="selectLanguage('Hindi')">Hindi</button>
+      <button onclick="selectLanguage('Spanish')">Spanish</button>
+      <button onclick="selectLanguage('French')">French</button>
+      <button onclick="selectLanguage('German')">German</button>
+      <button onclick="selectLanguage('Italian')">Italian</button>
+    </div>
+  </div>
+
+  <script>
+    function selectLanguage(language) {
+      console.log("Language selected:", language); // Debugging log
+      localStorage.setItem("selectedLanguage", language);
+      window.location.href = "registration.html";  // Redirect to registration page
+    }
+  </script>
+</body>
+</html>
